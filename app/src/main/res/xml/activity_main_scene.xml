@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:layout_height="0dp"
+            android:layout_marginTop="160dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="14dp"
+            motion:layout_constraintBottom_toTopOf="@+id/btnStart"
+            motion:layout_constraintEnd_toEndOf="@+id/menu"
+            android:layout_width="0dp"
+            android:id="@+id/btnKupa"
+            motion:layout_constraintStart_toStartOf="@+id/menu" />
+        <Constraint
+            motion:layout_constraintEnd_toStartOf="@+id/btnStart"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="169dp"
+            motion:layout_constraintTop_toBottomOf="@+id/btnKupa"
+            android:layout_marginStart="37dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/btnNotes"
+            android:layout_marginEnd="22dp"
+            android:layout_marginTop="16dp" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="158dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="170dp"
+            android:layout_marginEnd="37dp"
+            motion:layout_constraintTop_toBottomOf="@+id/btnKupa"
+            android:id="@+id/btnStart"
+            android:layout_marginTop="8dp" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintVertical_bias="0.498"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/menu"
+            android:layout_marginBottom="8dp" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/cardView"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:translationY="25dp"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/imageView"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintVertical_bias="0.498"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/btnStartimg"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/btnNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="170dp"
+            android:layout_marginEnd="71dp"
+            motion:layout_constraintTop_toBottomOf="@+id/btnKupa"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/btnKupa"
+            motion:layout_constraintEnd_toEndOf="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="14dp"
+            motion:layout_constraintBottom_toTopOf="@+id/btnStart"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="@+id/imageView"
+            android:layout_marginTop="160dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/btnNotes"
+            motion:layout_constraintEnd_toStartOf="@+id/btnStartimg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="169dp"
+            android:layout_marginEnd="40dp"
+            motion:layout_constraintTop_toBottomOf="@+id/btnKupa"
+            android:layout_marginStart="37dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/btnStart"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="158dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="170dp"
+            android:layout_marginEnd="37dp"
+            motion:layout_constraintTop_toBottomOf="@+id/btnKupa"
+            android:visibility="invisible" />
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/end"
+        motion:duration="851">
+        <OnSwipe />
+        <OnSwipe />
+        <OnClick motion:targetId="@+id/cardView" />
+        <OnSwipe />
+        <OnSwipe motion:touchAnchorId="@+id/cardView" />
+        <OnSwipe motion:touchAnchorId="@+id/cardView" />
+        <OnSwipe />
+    </Transition>
+</MotionScene>
