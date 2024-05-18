@@ -24,7 +24,7 @@ Kelimeler, [Oxford 3000](https://www.oxfordlearnersdictionaries.com/wordlist/eng
 
 ## Veri Çekme ve Düzenleme
 
-Bu işlemlere ait kodlar başka bir repoda bulunmaktadır. Verilerin çekilmesi ve düzenlenmesi ile ilgili detaylı bilgilere [bu repodan](URL) ulaşabilirsiniz.
+Bu işlemlere ait kodlar başka bir repoda bulunmaktadır. Verilerin çekilmesi ve düzenlenmesi ile ilgili detaylı bilgilere [bu repodan](https://github.com/sevdindagdelen/getting_words_clone) ulaşabilirsiniz.
 
 ## Kullanılan Teknolojiler
 
